@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <p>First number <input type="number" id="num1" min="0" max="100" value="5"></p>
+        <p>Second number <input type="number" id="num2" min="0" max="100" value="5"></p>
+        <input type="button" id="multiply" value="Multiply!">
+        <input type="button" id="Divine" value="Divine!">
+        <input type="button" id="clear" value="Clear History">
+        <p id="result"></p>
+		 <img id="myImage" src="X.jpg" style="width:100px">
+        <script>
+        $("#multiply").on("click", function() {
+		$("#result").prepend($("#num1").val()+"*"+ $("#num2").val()+ "=" + $("#num1").val() * $("#num2").val()+"<br>");
+        });
+        		
+        $("#Divine").on("click", function() {
+        $("#result").prepend($("#num1").val() + "/"+$("#num2").val()+"="+ $("#num1").val() / $("#num2").val()+"<br>");
+        }); 
+            
+        $("#clear").on("click", function() {
+        $("#result").text("");
+            });            
+        </script>
+    </body>
+</html>
